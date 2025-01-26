@@ -1,7 +1,7 @@
-num =    123
+num = 123
 
-def  func               ():
+def func():
     print (num)
 
 if(__name__ == '__main__'):
-            func()
+    func()

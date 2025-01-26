@@ -1,0 +1,20 @@
+name: Python Style Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  style-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Prettify code
+        uses: astral-sh/ruff-action@v3
