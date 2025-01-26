@@ -16,16 +16,5 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.9"
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install ruff
-
-      - name: Run style check
-        run: |
-          ruff check .
+      - name: Prettify code
+        uses: astral-sh/ruff-action@v3
