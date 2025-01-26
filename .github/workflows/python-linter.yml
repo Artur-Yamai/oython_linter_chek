@@ -28,4 +28,4 @@ jobs:
 
       - name: Run style check
         run: |
-          ruff .
+          ruff check .
